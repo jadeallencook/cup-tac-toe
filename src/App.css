@@ -5,6 +5,10 @@ div#App {
   padding: 25px;
 }
 
+h1 {
+  font-family: 'Anton', sans-serif;
+}
+
 div#players {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -113,4 +117,17 @@ div#winner > button {
   color: #FFF;
   background-color: #333;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  div#board {
+    height: 250px;
+    width: 250px;
+    margin-bottom: 25px;
+  }
+  div#players {
+    grid-template-columns: 1fr;
+    max-width: 250px;
+    margin: 0 auto;
+  }
 }
