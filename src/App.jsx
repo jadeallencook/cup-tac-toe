@@ -15,8 +15,8 @@ function App() {
   const [isPlayersTurn, setIsPlayersTurn] = useState(true);
   const [selectedSize, setSelectedSize] = useState(0);
   const [players, setPlayers] = useState([
-    { ...createPlayer('Player 1', 'red') },
-    { ...createPlayer('Player 2', 'green') },
+    { ...createPlayer('Player 1', '#7A89C2') },
+    { ...createPlayer('Player 2', '#87B38D') },
   ]);
   const [player1, player2] = players;
   const [board, setBoard] = useState([
@@ -27,8 +27,8 @@ function App() {
   const newGame = () => {
     setIsPlayersTurn(true);
     setPlayers([
-      { ...createPlayer('Player 1', 'red') },
-      { ...createPlayer('Player 2', 'green') },
+      { ...createPlayer('Player 1', '#7A89C2') },
+      { ...createPlayer('Player 2', '#87B38D') },
     ]);
     setBoard([
       [{}, {}, {}],

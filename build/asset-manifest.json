@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cup-tac-toe/build/static/css/main.b99954ea.chunk.css",
-    "main.js": "/cup-tac-toe/build/static/js/main.5cab74ab.chunk.js",
-    "main.js.map": "/cup-tac-toe/build/static/js/main.5cab74ab.chunk.js.map",
+    "main.js": "/cup-tac-toe/build/static/js/main.dfe92de8.chunk.js",
+    "main.js.map": "/cup-tac-toe/build/static/js/main.dfe92de8.chunk.js.map",
     "runtime-main.js": "/cup-tac-toe/build/static/js/runtime-main.7e4de60b.js",
     "runtime-main.js.map": "/cup-tac-toe/build/static/js/runtime-main.7e4de60b.js.map",
     "static/js/2.d5edd4b8.chunk.js": "/cup-tac-toe/build/static/js/2.d5edd4b8.chunk.js",
@@ -12,13 +12,13 @@
     "index.html": "/cup-tac-toe/build/index.html",
     "static/css/main.b99954ea.chunk.css.map": "/cup-tac-toe/build/static/css/main.b99954ea.chunk.css.map",
     "static/js/2.d5edd4b8.chunk.js.LICENSE.txt": "/cup-tac-toe/build/static/js/2.d5edd4b8.chunk.js.LICENSE.txt",
-    "static/media/move.8d86d394.wav": "/cup-tac-toe/build/static/media/move.8d86d394.wav",
-    "static/media/winner.cc473c78.wav": "/cup-tac-toe/build/static/media/winner.cc473c78.wav"
+    "static/media/move.4581501b.wav": "/cup-tac-toe/build/static/media/move.4581501b.wav",
+    "static/media/winner.9b7b599c.wav": "/cup-tac-toe/build/static/media/winner.9b7b599c.wav"
   },
   "entrypoints": [
     "static/js/runtime-main.7e4de60b.js",
     "static/js/2.d5edd4b8.chunk.js",
     "static/css/main.b99954ea.chunk.css",
-    "static/js/main.5cab74ab.chunk.js"
+    "static/js/main.dfe92de8.chunk.js"
   ]
 }
