@@ -4,8 +4,11 @@ import Player from './components/Player';
 import isWinner from './utils/isWinner';
 import createPlayer from './utils/createPlayer';
 import isTie from './utils/isTie';
-import PlayerSfx from './assets/move.wav';
-import WinnerSfx from './assets/winner.wav';
+import PlayerWav from './assets/move.wav';
+import WinnerWav from './assets/winner.wav';
+
+const PlayerSfx = new Audio(PlayerWav);
+const WinnerSfx = new Audio(WinnerWav);
 
 function App() {
   const sizes = ['s', 'm', 'l', 'x'];
@@ -35,7 +38,7 @@ function App() {
   };
 
   if (isWinner(board)) {
-    new Audio(WinnerSfx).play();
+    WinnerSfx.play();
   }
 
   return (
@@ -67,7 +70,7 @@ function App() {
                     setPlayers(tempPlayers);
                     setSelectedSize(0);
                     setIsPlayersTurn(!isPlayersTurn);
-                    new Audio(PlayerSfx).play();
+                    PlayerSfx.play();
                   }
                 }}
               >
