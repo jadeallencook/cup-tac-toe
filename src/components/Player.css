@@ -1,0 +1,76 @@
+div.Player {
+    background-color: #333;
+    color: #FFF;
+    box-sizing: border-box;
+    padding: 15px;
+    border: solid #333 thick;
+}
+
+div.Player > span {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+div.Player > ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+div.Player > ul > li {
+    cursor: pointer;
+}
+
+div.Player > ul > li:hover {
+    opacity: 0.5;
+}
+
+div.Player > ul > li > div.cup {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    float: left;
+    margin-right: 5px;
+    border: solid thin #333;
+}
+
+div.Player > ul > li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+}
+
+div.Player > ul > li > div.x-cup > div {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+}
+
+div.Player > ul > li > div.l-cup > div {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+div.Player > ul > li > div.m-cup > div {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+div.Player > ul > li > div.s-cup > div {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    margin-top: 6px;
+    margin-left: 6px;
+}
