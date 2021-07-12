@@ -1,3 +1,8 @@
+/*
+  checks board to see if there is a winner
+  (board) => true/false
+*/
+
 const isWinner = (board) => {
   for (let num of [0, 1, 2]) {
     if (

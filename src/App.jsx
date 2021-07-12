@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Player from './components/Player';
 import isWinner from './utils/isWinner';
 import createPlayer from './utils/createPlayer';
 import isTie from './utils/isTie';
+import computer from './utils/computer';
+import getCoordinates from './utils/getCoordinates';
 import PlayerWav from './assets/move.wav';
 import WinnerWav from './assets/winner.wav';
 
@@ -12,11 +14,12 @@ const WinnerSfx = new Audio(WinnerWav);
 
 function App() {
   const sizes = ['s', 'm', 'l', 'x'];
+  const [isComputer] = useState(true);
   const [isPlayersTurn, setIsPlayersTurn] = useState(true);
   const [selectedSize, setSelectedSize] = useState(0);
   const [players, setPlayers] = useState([
     { ...createPlayer('Player 1', '#7A89C2') },
-    { ...createPlayer('Player 2', '#87B38D') },
+    { ...createPlayer(isComputer ? 'Computer' : 'Player 2', '#87B38D') },
   ]);
   const [player1, player2] = players;
   const [board, setBoard] = useState([
@@ -28,7 +31,7 @@ function App() {
     setIsPlayersTurn(true);
     setPlayers([
       { ...createPlayer('Player 1', '#7A89C2') },
-      { ...createPlayer('Player 2', '#87B38D') },
+      { ...createPlayer(isComputer ? 'Computer' : 'Player 2', '#87B38D') },
     ]);
     setBoard([
       [{}, {}, {}],
@@ -41,6 +44,20 @@ function App() {
     WinnerSfx.play();
   }
 
+  useEffect(() => {
+    if (!isPlayersTurn & isComputer & !isWinner(board)) {
+      computer({
+        board: { ...board },
+        players: [...players],
+        setBoard,
+        setPlayers,
+        setSelectedSize,
+        setIsPlayersTurn,
+        isPlayersTurn,
+      });
+    }
+  }, [isPlayersTurn]);
+
   return (
     <div id='App'>
       {isWinner(board) || isTie(board, players, +isPlayersTurn) ? null : (
@@ -50,7 +67,7 @@ function App() {
               <div
                 key={`cell-${index}`}
                 onClick={() => {
-                  const [y, x] = [Math.floor(index / 3), index % 3];
+                  const [y, x] = getCoordinates(index);
                   const numOfCups = players[+!isPlayersTurn].cups[selectedSize];
                   if (
                     (board[y][x].size === undefined ||

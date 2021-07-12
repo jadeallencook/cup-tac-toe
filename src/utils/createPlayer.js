@@ -1,3 +1,7 @@
+/*
+  creates a new player object
+*/
+
 const createPlayer = (name, color) => {
   return {
     name,
