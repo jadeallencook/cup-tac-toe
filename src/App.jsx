@@ -14,7 +14,7 @@ const WinnerSfx = new Audio(WinnerWav);
 
 function App() {
   const sizes = ['s', 'm', 'l', 'x'];
-  const [isComputer] = useState(true);
+  const [isComputer] = useState(false);
   const [isPlayersTurn, setIsPlayersTurn] = useState(true);
   const [selectedSize, setSelectedSize] = useState(0);
   const [players, setPlayers] = useState([
